@@ -1,0 +1,33 @@
+template:
+    directory: .
+
+github:
+    user: moqmar
+    repo: mintlook-couscous
+
+title: Mintlook Couscous Template
+logo: https://cdn0.iconfinder.com/data/icons/ie_Shine/128/shine_19.png
+
+languages: ["en", "de"]
+defaultLanguage: de
+
+search: false
+scripts:
+    after:
+        - php .couscous/generated/.scripts/generate-search-index.php
+        - rm -rf .couscous/generated/.scripts
+
+sidebar:
+  default:
+    - title: About mintlook
+    - subtitle: Links
+    - text: Homepage
+      link: https://moqmar.github.io/mintlook
+    - text: Mintlook and Couscous
+      page: /
+    - line: true
+    - html: <p>Follow us on <a href="">Facebook</a>, <a href="">Twitter</a>, and other <a href="">social networks</a>.</p>
+
+footer:
+  default: |
+    Hello <strong>World</strong>
