@@ -75,8 +75,8 @@
 {% if prev or next %}
 
                 <nav class="pagination">
-                    <div>{% if prev %}« <a href="{{ prev }}">{{ prevTitle|default(_self.stripExtension(prev|trim("/")|split("/")|last)) }}</a>{% endif %}</div>
-                    <div>{% if next %}<a href="{{ next }}">{{ nextTitle|default(_self.stripExtension(next|trim("/")|split("/")|last)) }}</a> »{% endif %}</div>
+                    <div>{% if prev %}« <a href="{{ baseUrl }}{{ prev }}">{{ prevTitle|default(_self.stripExtension(prev|trim("/")|split("/")|last)) }}</a>{% endif %}</div>
+                    <div>{% if next %}<a href="{{ baseUrl }}{{ next }}">{{ nextTitle|default(_self.stripExtension(next|trim("/")|split("/")|last)) }}</a> »{% endif %}</div>
                 </nav>
 {% endif %}
 
@@ -85,8 +85,8 @@
 <!-- CONTENT END -->
 {% if prev or next %}
                 <nav class="pagination">
-                    <div>{% if prev %}« <a href="{{ prev }}">{{ prevTitle|default(_self.stripExtension(prev|trim("/")|split("/")|last)) }}</a>{% endif %}</div>
-                    <div>{% if next %}<a href="{{ next }}">{{ nextTitle|default(_self.stripExtension(next|trim("/")|split("/")|last)) }}</a> »{% endif %}</div>
+                    <div>{% if prev %}« <a href="{{ baseUrl }}{{ prev }}">{{ prevTitle|default(_self.stripExtension(prev|trim("/")|split("/")|last)) }}</a>{% endif %}</div>
+                    <div>{% if next %}<a href="{{ baseUrl }}{{ next }}">{{ nextTitle|default(_self.stripExtension(next|trim("/")|split("/")|last)) }}</a> »{% endif %}</div>
                 </nav>{% endif %}
 
             </article>{% if sidebar %}
