@@ -1,6 +1,3 @@
----
-description: General usage, configuration and license of Couscous
----
 # Couscous Mintlook
 
 ![](https://static.mo-mar.de/couscous-mintlook.jpg)
