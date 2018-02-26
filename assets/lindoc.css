@@ -32,8 +32,9 @@ nav.breadcrumbs { flex-grow: 1; order: 2; }
     border: 1px solid #04AB90; margin-top: -1px;
     border-radius: 0 0 2px 2px; overflow: hidden;
     box-shadow: 0 1px 4px -1px rgba(0,0,0,0.3);
-    max-height: 200px;
+    max-height: 300px;
     overflow-y: auto;
+    z-index: 100;
 }
 .results:empty { display: none; }
 .results a { text-decoration: none; display: block; }
