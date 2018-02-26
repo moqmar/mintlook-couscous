@@ -14,12 +14,13 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Share:400|Jaldi:400,700|Fira+Mono:400,700">
         <link rel="stylesheet" href="{{ baseUrl }}/assets/base.css">
         <link rel="stylesheet" href="{{ baseUrl }}/assets/lindoc.css">
-        <style>
+        {% if color %}<style>
             a,.results strong{color:{{ color }}}
             button,input[type=submit],input[type=button],input[type=reset],.button,.search input[type=submit]{background-color:{{ color }}}
             .search input[type=text]:focus,.results,.results strong{border-color:{{ color }} !important}
             @media screen and (min-width:1450px){.livetoc a.active{ color:{{ color }}}}
         </style>
+{% endif %}
         <script>
             // Parent Elements - e.P("body") - https://gist.github.com/moqmar/0995cf6595201f7a062fb173cb4ab938
             (function(E){E.matches||(E.matches=E.matchesSelector||E.msMatchesSelector||E.webkitMatchesSelector)})(Element.prototype)
@@ -61,7 +62,7 @@
 {% endif %}
             <nav class="breadcrumbs">{% set bcpath = "#{baseUrl}/" %}
 
-                <a href="/{% if pageLanguage != defaultLanguage %}{{ pageLanguage }}/{% endif %}">{{ title }}</a>{% for x in _self.currentUrl(currentFile, languages)|split("/") %}{% if not (x == "") %}{% set bcpath = "#{bcpath}#{x}/" %} » {% if loop.last %}<strong>{% else %}<a href="{{ bcpath }}">{% endif %}{{ _self.stripExtension(x) }}{% if loop.last %}</strong>{% else %}</a>{% endif %}{% endif %}{% endfor %}
+                <a href="{{ baseUrl }}/{% if pageLanguage != defaultLanguage %}{{ pageLanguage }}/{% endif %}">{{ title }}</a>{% for x in _self.currentUrl(currentFile, languages)|split("/") %}{% if not (x == "") %}{% set bcpath = "#{bcpath}#{x}/" %} » {% if loop.last %}<strong>{% else %}<a href="{{ bcpath }}">{% endif %}{{ _self.stripExtension(x) }}{% if loop.last %}</strong>{% else %}</a>{% endif %}{% endif %}{% endfor %}
 
             </nav>
         </header>
