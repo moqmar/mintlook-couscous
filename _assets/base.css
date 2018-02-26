@@ -89,7 +89,7 @@ pre { padding: 15px; overflow: auto; }
 pre code { padding: 0; border: none; background: transparent; font-size: 1em; }
 
 /* Block elements */
-img:not(.inline), svg:not(.inline):not(.svg-inline--fa), video:not(.inline), audio:not(.inline), iframe:not(.inline), embed:not(.inline), object:not(.inline) { display: block; width: 100%; } /* Add the inline class to make images inline instead of a block. */
+img:not(.inline), svg:not(.inline):not(.svg-inline--fa), video:not(.inline), audio:not(.inline), iframe:not(.inline), embed:not(.inline), object:not(.inline) { display: block; width: 100%; border-radius: 3px } /* Add the inline class to make images inline instead of a block. */
 .limit { max-width: 30%; }
 .float-r { float: right; }
 .float-l { float: left; }
