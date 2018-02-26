@@ -24,6 +24,8 @@ template:
 
 You should also add the file [`404.md`](https://github.com/moqmar/mintlook-couscous/blob/master/404.md) to your documentation and configure your webserver to point to `/404.html` on missing pages.
 
+A file `icon.png` in the project root (`baseUrl`) will be used as a favicon.
+
 ## Configuration
 ```yaml
 title: Couscous # Page Title
