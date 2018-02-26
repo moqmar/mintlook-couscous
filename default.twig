@@ -61,7 +61,7 @@
 {% endif %}
             <nav class="breadcrumbs">{% set bcpath = "#{baseUrl}/" %}
 
-                <a href="/">{{ title }}</a>{% for x in _self.currentUrl(currentFile, languages)|split("/") %}{% if not (x == "") %}{% set bcpath = "#{bcpath}#{x}/" %} » {% if loop.last %}<strong>{% else %}<a href="{{ bcpath }}">{% endif %}{{ _self.stripExtension(x) }}{% if loop.last %}</strong>{% else %}</a>{% endif %}{% endif %}{% endfor %}
+                <a href="/{% if pageLanguage != defaultLanguage %}{{ pageLanguage }}/{% endif %}">{{ title }}</a>{% for x in _self.currentUrl(currentFile, languages)|split("/") %}{% if not (x == "") %}{% set bcpath = "#{bcpath}#{x}/" %} » {% if loop.last %}<strong>{% else %}<a href="{{ bcpath }}">{% endif %}{{ _self.stripExtension(x) }}{% if loop.last %}</strong>{% else %}</a>{% endif %}{% endif %}{% endfor %}
 
             </nav>
         </header>
