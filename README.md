@@ -1,6 +1,6 @@
 # Couscous Mintlook
 
-![](https://static.mo-mar.de/couscous-mintlook.jpg)
+![](https://static.mo-mar.de/couscous-mintlook-mockup.jpg)
 
 [Live Example](https://moqmar.github.io/shell-setup/)
 
