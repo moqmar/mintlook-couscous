@@ -2,6 +2,8 @@
 
 ![](https://static.mo-mar.de/couscous-mintlook.jpg)
 
+[Live Example](https://moqmar.github.io/shell-setup/)
+
 ## Features
 
 - Search function
