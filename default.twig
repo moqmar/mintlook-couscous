@@ -96,7 +96,7 @@
 {% set pageSidebar = sidebar %}
 {% if not (sidebar|keys|first matches '/^\\d+$/') %}
 {% set pageSidebar = sidebar.default|default(sidebar) %}
-{% for k, v in sidebar %}{% if k == pageLanguage %}{% set pageSidebar = v %}{{k}}{% endif %}{% endfor %}
+{% for k, v in sidebar %}{% if k == pageLanguage %}{% set pageSidebar = v %}{% endif %}{% endfor %}
 {% endif %}
 {% for item in pageSidebar %}
                 {% if item.line %}<hr>
