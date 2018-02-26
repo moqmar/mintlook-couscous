@@ -104,8 +104,8 @@
 {% elseif item.title %}<h2>{{ item.title }}</h2>
 {% elseif item.subtitle %}<h3>{{ item.subtitle }}</h3>
 {% elseif item.html %}{{ item.html|raw }}
-{% elseif item.page %}<a href="{{ baseUrl }}{{ item.page }}" class="bulletlink">{{ item.text }}</a>
-{% elseif item.link %}<a href="{{ item.link }}" class="bulletlink">{{ item.text }}</a>
+{% elseif item.page %}<div class="bulletlink"><a href="{{ baseUrl }}{{ item.page }}">{{ item.text }}</a></div>
+{% elseif item.link %}<div class="bulletlink"><a href="{{ item.link }}">{{ item.text }}</a></div>
 {% else %}<p>{{ item.text }}</p>
 {% endif %}
 {% endfor %}
