@@ -12,8 +12,8 @@
         {% if metaDescription|default(description) %}<meta name="description" content="{{ metaDescription|default(description) }}">
 {% endif %}
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Share:400|Jaldi:400,700|Fira+Mono:400,700">
-        <link rel="stylesheet" href="{{ baseUrl }}/_assets/base.css">
-        <link rel="stylesheet" href="{{ baseUrl }}/_assets/lindoc.css">
+        <link rel="stylesheet" href="{{ baseUrl }}/assets/base.css">
+        <link rel="stylesheet" href="{{ baseUrl }}/assets/lindoc.css">
         <style>
             a,.results strong{color:{{ color }}}
             button,input[type=submit],input[type=button],input[type=reset],.button,.search input[type=submit]{background-color:{{ color }}}
@@ -45,10 +45,10 @@
 {% endif %}{% if languages|length > 0 %}
             <div class="language">
                 <input type="checkbox" id="language-select">
-                <label for="language-select"><img src="{{ baseUrl }}/_assets/flags/{{ pageLanguage }}.png"></label>
+                <label for="language-select"><img src="{{ baseUrl }}/assets/flags/{{ pageLanguage }}.png"></label>
                 <div class="language-select-popup">
 {% for lang in languages %}
-                    <a href="{{ baseUrl }}/{% if lang != defaultLanguage %}{{ lang }}/{% endif %}{{ _self.mdToHtml(_self.currentUrl(currentFile, languages)) }}"><img src="{{ baseUrl }}/_assets/flags/{{ lang }}.png"></a>
+                    <a href="{{ baseUrl }}/{% if lang != defaultLanguage %}{{ lang }}/{% endif %}{{ _self.mdToHtml(_self.currentUrl(currentFile, languages)) }}"><img src="{{ baseUrl }}/assets/flags/{{ lang }}.png"></a>
 {% endfor %}
                 </div>
                 <script>
@@ -126,16 +126,16 @@
 
         </main>
 
-        <script src="{{ baseUrl }}/_assets/toc.js"></script>
+        <script src="{{ baseUrl }}/assets/toc.js"></script>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/prism.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/plugins/autoloader/prism-autoloader.min.js"></script>
         <script>Prism.plugins.autoloader.languages_path = "https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/components/";</script>
-        <link rel="stylesheet" href="{{ baseUrl }}/_assets/prism.css">
+        <link rel="stylesheet" href="{{ baseUrl }}/assets/prism.css">
 
 {% if search %}
         <script src="https://cdn.jsdelivr.net/npm/js-search@1.4.2/dist/umd/js-search.min.js"></script>
-        <script src="{{ baseUrl }}/_assets/search.js"></script>
+        <script src="{{ baseUrl }}/assets/search.js"></script>
 {% endif %}
     </body>
 </html>
