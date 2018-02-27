@@ -35,8 +35,7 @@
     <body>
         <header>
             <h1>
-                {% if logo %}<img src="{{ logo }}" alt="{{ title|default('Couscous') }}">{% else %}{{ title | default('Couscous') }}{% endif %}
-
+                <a href="{{ baseUrl }}/{% if pageLanguage != defaultLanguage %}{{ pageLanguage }}/{% endif %}">{% if logo %}<img src="{{ logo }}" alt="{{ title|default('Couscous') }}">{% else %}{{ title | default('Couscous') }}{% endif %}</a>
             </h1>
 {% if search %}{% if not noIndex %}            <!-- THIS DOCUMENT IS INDEXED -->
 {% endif %}
@@ -63,7 +62,7 @@
 {% endif %}
             <nav class="breadcrumbs">{% set bcpath = "#{baseUrl}/" %}
 
-                <a href="{{ baseUrl }}/{% if pageLanguage != defaultLanguage %}{{ pageLanguage }}/{% endif %}">{{ title }}</a>{% for x in _self.currentUrl(currentFile, languages)|split("/") %}{% if not (x == "") %}{% set bcpath = "#{bcpath}#{x}/" %} » {% if loop.last %}<strong>{% else %}<a href="{{ bcpath }}">{% endif %}{{ _self.stripExtension(x) }}{% if loop.last %}</strong>{% else %}</a>{% endif %}{% endif %}{% endfor %}
+                {% if logo %}<a href="{{ baseUrl }}/{% if pageLanguage != defaultLanguage %}{{ pageLanguage }}/{% endif %}">{{ title }}</a>{% endif %}{% for x in _self.currentUrl(currentFile, languages)|split("/") %}{% if not (x == "") %}{% set bcpath = "#{bcpath}#{x}/" %} » {% if loop.last %}<strong>{% else %}<a href="{{ bcpath }}">{% endif %}{{ _self.stripExtension(x) }}{% if loop.last %}</strong>{% else %}</a>{% endif %}{% endif %}{% endfor %}
 
             </nav>
         </header>
